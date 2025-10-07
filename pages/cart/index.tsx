@@ -5,6 +5,7 @@ import { RootState, AppDispatch } from "@/redux/store";
 import { addToCart, removeFromCart } from "@/redux/cartSlice";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Cart() {
     const [isClient, setIsClient] = useState(false);
@@ -63,7 +64,7 @@ export default function Cart() {
                                 {cartItems.map(item => (
                                     <div key={item.id} className="col-12 d-flex align-items-center border rounded p-3">
                                         <div className="me-3" style={{ width: "100px", height: "100px", flexShrink: 0 }}>
-                                            <img
+                                            <Image
                                                 src={item.image}
                                                 alt={item.title}
                                                 width={100}

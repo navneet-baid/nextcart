@@ -64,7 +64,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             <section className={`${styles.container} container`}>
                 <div className={styles.left}>
                     <div className={styles.imageWrapper}>
-                        <img src={product.image} alt={product.title} />
+                        <Image src={product.image} width={850} height={850} alt={product.title} />
                     </div>
                 </div>
 

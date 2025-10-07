@@ -1,6 +1,7 @@
 import { StarFill, StarHalf, Star } from "react-bootstrap-icons";
 import Link from 'next/link';
 import styles from '@/styles/ProductCard.module.css';
+import Image from "next/image";
 
 interface ProductCardProps {
     id: number | string;
@@ -28,7 +29,7 @@ export default function ProductCard({
             <span className={styles.category}>{category}</span>
 
             <div className={styles.imageWrapper}>
-                <img src={image} alt={name} className={styles.productImage} />
+                <Image src={image} alt={name} width={500} height={500} className={styles.productImage} />
             </div>
 
             <div className={styles.productInfo}>
