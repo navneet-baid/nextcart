@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import styles from "@/styles/ProductDetail.module.css";
 import { fetchProducts, Product } from "@/redux/productsSlice";
@@ -11,12 +11,25 @@ import { AppDispatch } from "@/redux/store";
 import { addToCart } from "@/redux/cartSlice";
 import Toast from "@/components/Toast";
 
-
 interface ProductDetailProps {
     product: Product;
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+    await store.dispatch(fetchProducts());
+    const allProducts = store.getState().products.allItems;
+
+    const paths = allProducts.map((product) => ({
+        params: { id: product.id.toString() },
+    }));
+
+    return {
+        paths,
+        fallback: false,
+    };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
     const id = context.params?.id;
     await store.dispatch(fetchProducts());
     const allProducts = store.getState().products.allItems;
