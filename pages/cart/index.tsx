@@ -73,7 +73,7 @@ export default function Cart() {
                                         </div>
 
                                         <div className="flex-grow-1">
-                                            <h5 className="mb-1">{item.title}</h5>
+                                            <h5 className={`mb-1 ${styles.productTitle}`}>{item.title}</h5>
                                             <p className="mb-1">Price: ${item.price}</p>
 
                                             <div className="d-flex align-items-center mb-2">

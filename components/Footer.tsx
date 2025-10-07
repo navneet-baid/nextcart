@@ -12,7 +12,6 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className="container">
                 <div className={styles.footerContent}>
-                    {/* About */}
                     <div className={styles.footerCol}>
                         <h4 className={styles.footerTitle}>About NextCart</h4>
                         <p className={styles.aboutText}>
@@ -22,7 +21,6 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Shop Links */}
                     <div className={styles.footerCol}>
                         <h4 className={styles.footerTitle}>Shop</h4>
                         <ul className={styles.footerLinks}>
@@ -32,7 +30,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Policy Links */}
                     <div className={styles.footerCol}>
                         <h4 className={styles.footerTitle}>Information</h4>
                         <ul className={styles.footerLinks}>
@@ -42,7 +39,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Social Icons */}
                     <div className={styles.footerCol}>
                         <h4 className={styles.footerTitle}>Follow Us</h4>
                         <div className={styles.socialIcons}>

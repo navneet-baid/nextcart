@@ -21,3 +21,11 @@
     text-decoration: none;
     color: #333;
 }
+
+.productTitle {
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}
