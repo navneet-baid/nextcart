@@ -37,7 +37,7 @@ const initialState: ProductsState = {
 };
 
 export const fetchProducts = createAsyncThunk("products/fetchProducts", async () => {
-    const res = await fetch("https://fakestoreapi.com/products");
+    const res = await fetch(process.env.NEXT_PUBLIC_API_URL || "https://fakestoreapi.com/products");
     const data = await res.json();
     return data as Product[];
 });
