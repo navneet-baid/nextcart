@@ -9,7 +9,6 @@ interface CartState {
     items: CartItem[];
 }
 
-// cartSlice.ts
 const savedCart = typeof window !== "undefined" ? localStorage.getItem("cart") : null;
 const initialState: CartState = savedCart ? JSON.parse(savedCart) : { items: [] };
 
