@@ -1,0 +1,31 @@
+.heroSection :global(.container) {
+    background-color: var(--color-bg);
+    padding: 3rem 0;
+    border-radius: 12px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+}

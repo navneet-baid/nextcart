@@ -1,0 +1,9 @@
+:root {
+    --color-primary: #1E1E1E;
+    --color-bg: #EFF0F4;
+    --color-text: #1E1E1E;
+    --color-white: #ffffff;
+
+    --radius-btn: 6px;
+    --transition-base: all 0.3s ease;
+}
